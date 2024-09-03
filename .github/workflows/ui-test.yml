@@ -269,7 +269,7 @@ jobs:
           npm install
 
       - name: Download TTK
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ttk
           path: ./packages/tests
@@ -398,7 +398,7 @@ jobs:
 
       - name: Download TestPlan
         if: ${{ always() && github.event.inputs.target-testplan-id != '' }}
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: testplan
           path: ./packages/tests
